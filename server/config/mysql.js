@@ -5,10 +5,10 @@ dotenv.config();
 
 // MySQL connection options
 const dbConfig = {
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASSWORD || '',
-    database: process.env.DB_NAME || 'social_media_app',
+    host: process.env.DB_HOST || 'group2-db-instance.cia52x53b50y.us-east-1.rds.amazonaws.com',
+    user: process.env.DB_USER || 'admin',
+    password: process.env.DB_PASSWORD || 'yourpassword#',
+    database: process.env.DB_NAME || 'test1_db',
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
