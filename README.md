@@ -29,11 +29,13 @@ Create a `.env` file in the server directory:
 # server/.env
 PORT_NUM=5000
 AWS_REGION=us-east-1
-AWS_ACCESS_KEY_ID=your_access_key_id
-AWS_SECRET_ACCESS_KEY=your_secret_access_key
-```
+AWS_BUCKET_NAME=your-bucket-name
+DB_HOST=your-host
+DB_USER=your-account
+DB_PASSWORD=your-password
+DB_NAME=name-of-db
 
-Replace `your_access_key_id` and `your_secret_access_key` with your actual AWS credentials.
+```
 
 ### 3. Install Dependencies
 
