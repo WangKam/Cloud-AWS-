@@ -17,6 +17,15 @@ export default makeStyles((theme) => ({
   fileInput: {
     width: '97%',
     margin: '10px 0',
+    padding: '10px',
+    border: '1px dashed #ccc',
+    borderRadius: '4px',
+  },
+  filePreview: {
+    marginTop: '10px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   buttonSubmit: {
     marginBottom: 10,

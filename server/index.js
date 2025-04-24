@@ -2,6 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import postRoutes from "./routes/posts.js";
+import uploadRoutes from "./routes/upload.js";
 import dotenv from "dotenv";
 import { initializeDatabase } from "./config/mysql.js";
 import path from 'path';
@@ -24,6 +25,7 @@ app.use(cors());
 
 //express middleware
 app.use("/posts", postRoutes);
+app.use("/upload", uploadRoutes);
 
 //Connecting to MySQL database and starting server
 const PORT_NUM = process.env.PORT_NUM || 5000;

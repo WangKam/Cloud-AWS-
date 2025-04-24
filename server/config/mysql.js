@@ -71,7 +71,7 @@ const initializeDatabase = async () => {
                 message TEXT,
                 creator VARCHAR(100),
                 tags VARCHAR(255),
-                selectedFile LONGTEXT,
+                selectedFile VARCHAR(2048),
                 likeCount INT DEFAULT 0,
                 createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
