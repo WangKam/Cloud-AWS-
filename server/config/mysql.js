@@ -1,7 +1,14 @@
 import mysql from 'mysql2/promise';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-dotenv.config();
+// Get the directory name of the current module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Load environment variables with explicit path to .env file
+dotenv.config({ path: path.resolve(__dirname, '..', '.env') });
 
 // MySQL connection options
 const dbConfig = {
@@ -20,6 +27,14 @@ let pool;
 // Initialize database tables
 const initializeDatabase = async () => {
     try {
+        // Log environment variables for debugging (not the password)
+        console.log('Environment variables loaded:', {
+            DB_HOST: process.env.DB_HOST,
+            DB_USER: process.env.DB_USER,
+            DB_NAME: process.env.DB_NAME,
+            // Not logging password for security
+        });
+
         console.log('Attempting to connect to MySQL database with config:', {
             host: dbConfig.host,
             user: dbConfig.user,
