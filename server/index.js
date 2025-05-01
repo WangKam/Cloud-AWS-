@@ -41,3 +41,7 @@ initializeDatabase()
     console.error("Failed to initialize MySQL database:", error);
     process.exit(1);
   });
+  
+const s3Routes = require('./routes/s3');
+app.use('/', s3Routes);
+  
